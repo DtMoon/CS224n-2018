@@ -1,0 +1,470 @@
+[W 22:11:46.261 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 22:11:46.289 NotebookApp] JupyterLab beta preview extension loaded from /home/lanho/anaconda3/lib/python3.6/site-packages/jupyterlab
+[I 22:11:46.289 NotebookApp] JupyterLab application directory is /home/lanho/anaconda3/share/jupyter/lab
+[I 22:11:46.294 NotebookApp] Serving notebooks from local directory: /root/CS224n-2018/assignment1
+[I 22:11:46.294 NotebookApp] 0 active kernels
+[I 22:11:46.294 NotebookApp] The Jupyter Notebook is running at:
+[I 22:11:46.294 NotebookApp] http://[all ip addresses on your system]:7000/?token=a6eb64b87a63ea1d69520680f0260224ec1218bec8856a36
+[I 22:11:46.294 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 22:11:46.294 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7000/?token=a6eb64b87a63ea1d69520680f0260224ec1218bec8856a36
+[W 22:11:53.688 NotebookApp] 404 GET /api/kernels/07c7f3be-aaa8-4554-a829-ea5a4621c556/channels?session_id=f70c39c59be348029e592d810f7f2d93 (160.39.170.169): Kernel does not exist: 07c7f3be-aaa8-4554-a829-ea5a4621c556
+[W 22:11:53.752 NotebookApp] 404 GET /api/kernels/07c7f3be-aaa8-4554-a829-ea5a4621c556/channels?session_id=f70c39c59be348029e592d810f7f2d93 (160.39.170.169) 100.65ms referer=None
+[I 22:12:01.474 NotebookApp] Saving file at /assignment1.ipynb
+[W 22:12:09.810 NotebookApp] Replacing stale connection: 07c7f3be-aaa8-4554-a829-ea5a4621c556:f70c39c59be348029e592d810f7f2d93
+[C 22:21:28.550 NotebookApp] received signal 15, stopping
+[I 22:21:28.551 NotebookApp] Shutting down 0 kernels
+[W 01:49:24.851 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 01:49:25.301 NotebookApp] JupyterLab beta preview extension loaded from /home/lanho/anaconda3/lib/python3.6/site-packages/jupyterlab
+[I 01:49:25.301 NotebookApp] JupyterLab application directory is /home/lanho/anaconda3/share/jupyter/lab
+[I 01:49:25.336 NotebookApp] Serving notebooks from local directory: /root/CS224n-2018/assignment1
+[I 01:49:25.336 NotebookApp] 0 active kernels
+[I 01:49:25.336 NotebookApp] The Jupyter Notebook is running at:
+[I 01:49:25.337 NotebookApp] http://[all ip addresses on your system]:7000/?token=fb45e3717c8dbf6abeb0b4e31914145362209db8d7554f50
+[I 01:49:25.337 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 01:49:25.337 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7000/?token=fb45e3717c8dbf6abeb0b4e31914145362209db8d7554f50
+[I 01:49:27.951 NotebookApp] Kernel started: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 01:49:28.834 NotebookApp] Adapting to protocol v5.1 for kernel 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 01:51:28.193 NotebookApp] Saving file at /assignment1.ipynb
+[I 01:53:28.251 NotebookApp] Saving file at /assignment1.ipynb
+[I 01:57:28.196 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:01:28.185 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:05:28.187 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:09:28.194 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:13:25.448 NotebookApp] 302 GET / (160.39.38.39) 0.59ms
+[I 02:15:28.225 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:17:27.936 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:19:28.211 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:21:28.195 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:22:26.942 NotebookApp] Saving file at /q3_sgd.py
+[I 02:22:32.021 NotebookApp] Saving file at /q3_sgd.py
+[I 02:22:40.762 NotebookApp] Starting buffering for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:22:41.289 NotebookApp] Kernel restarted: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:22:42.092 NotebookApp] Adapting to protocol v5.1 for kernel 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:22:42.093 NotebookApp] Restoring connection for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:22:42.093 NotebookApp] Replaying 5 buffered messages
+[I 02:23:28.255 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:27:01.498 NotebookApp] Saving file at /q3_sgd.py
+[I 02:27:08.695 NotebookApp] Kernel restarted: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[W 02:27:08.699 NotebookApp] zmq message arrived on closed channel
+[I 02:27:08.699 NotebookApp] Starting buffering for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:27:09.461 NotebookApp] Adapting to protocol v5.1 for kernel 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:27:09.462 NotebookApp] Restoring connection for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:27:09.462 NotebookApp] Replaying 4 buffered messages
+[I 02:27:24.043 NotebookApp] Kernel interrupted: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:27:27.938 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:27:42.465 NotebookApp] Saving file at /q3_sgd.py
+[I 02:27:48.415 NotebookApp] Saving file at /q3_sgd.py
+[I 02:27:56.634 NotebookApp] Starting buffering for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:27:57.346 NotebookApp] Kernel restarted: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:27:58.168 NotebookApp] Adapting to protocol v5.1 for kernel 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 02:27:58.168 NotebookApp] Restoring connection for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 02:27:58.168 NotebookApp] Replaying 3 buffered messages
+[I 02:29:28.204 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:33:28.231 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:35:28.215 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:39:28.205 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:43:28.221 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:47:28.221 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:49:28.209 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:53:28.256 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:53:50.629 NotebookApp] Saving file at /q3_run.py
+[I 02:57:28.241 NotebookApp] Saving file at /assignment1.ipynb
+[I 02:58:33.062 NotebookApp] Saving file at /q4_sentiment.py
+[I 02:59:10.704 NotebookApp] Saving file at /q4_sentiment.py
+[I 02:59:34.100 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:00:14.424 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:00:59.520 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:01:27.751 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:01:28.282 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:01:44.818 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:02:00.187 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:02:13.931 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:02:28.481 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:05:02.442 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:05:27.964 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:08:33.865 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:09:28.411 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:10:01.912 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:10:38.753 NotebookApp] Saving file at /q4_sentiment.py
+[I 03:11:28.287 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:15:28.252 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:19:28.397 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:23:28.023 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:27:28.078 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:29:33.456 NotebookApp] Starting buffering for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 03:29:35.314 NotebookApp] Adapting to protocol v5.1 for kernel 37ad5e33-77ef-46f5-8d00-e25c61235107
+[I 03:29:35.315 NotebookApp] Restoring connection for 37ad5e33-77ef-46f5-8d00-e25c61235107:94c99a5b084b42c48c18c1589191d363
+[I 03:31:28.304 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:33:28.252 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:37:28.248 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:41:28.251 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:45:28.264 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:49:28.254 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:53:28.283 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:55:28.267 NotebookApp] Saving file at /assignment1.ipynb
+[I 03:59:28.266 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:03:28.267 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:07:28.274 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:11:28.276 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:15:28.271 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:17:28.280 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:21:28.282 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:25:28.289 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:29:28.284 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:33:28.302 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:35:28.302 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:39:28.308 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:43:28.299 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:47:28.308 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:49:28.303 NotebookApp] Saving file at /assignment1.ipynb
+[I 04:53:28.305 NotebookApp] Saving file at /assignment1.ipynb
+[I 06:53:38.426 NotebookApp] 302 GET / (211.20.68.233) 0.50ms
+[I 06:53:38.609 NotebookApp] 302 GET /tree? (211.20.68.233) 1.26ms
+[W 06:53:39.064 NotebookApp] 404 GET /index.action (211.20.68.233) 50.89ms referer=None
+[C 07:22:11.394 NotebookApp] received signal 15, stopping
+[I 07:22:11.395 NotebookApp] Shutting down 1 kernel
+[I 07:22:11.496 NotebookApp] Kernel shutdown: 37ad5e33-77ef-46f5-8d00-e25c61235107
+[W 13:00:35.344 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 13:00:35.707 NotebookApp] JupyterLab beta preview extension loaded from /home/lanho/anaconda3/lib/python3.6/site-packages/jupyterlab
+[I 13:00:35.707 NotebookApp] JupyterLab application directory is /home/lanho/anaconda3/share/jupyter/lab
+[I 13:00:35.735 NotebookApp] Serving notebooks from local directory: /root/CS224n-2018/assignment1
+[I 13:00:35.735 NotebookApp] 0 active kernels
+[I 13:00:35.735 NotebookApp] The Jupyter Notebook is running at:
+[I 13:00:35.735 NotebookApp] http://[all ip addresses on your system]:7000/?token=54b1ee8bcec895d190c7eb0611fdb2ed2116ed8791c3b767
+[I 13:00:35.735 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:00:35.746 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7000/?token=54b1ee8bcec895d190c7eb0611fdb2ed2116ed8791c3b767
+[I 13:00:40.092 NotebookApp] Kernel started: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:00:41.126 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:02:40.646 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:04:40.651 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:04:55.778 NotebookApp] Saving file at /q3_run.py
+[I 13:05:38.703 NotebookApp] Saving file at /q3_run.py
+[I 13:06:40.010 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:08:40.641 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:09:58.405 NotebookApp] Kernel interrupted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:10:07.355 NotebookApp] Saving file at /q3_run.py
+[I 13:10:13.706 NotebookApp] Starting buffering for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 13:10:14.413 NotebookApp] Kernel restarted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:10:15.185 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:10:15.185 NotebookApp] Restoring connection for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 13:10:15.186 NotebookApp] Replaying 6 buffered messages
+[I 13:10:40.015 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:12:40.728 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:14:40.653 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:14:53.672 NotebookApp] Kernel interrupted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:15:17.232 NotebookApp] Saving file at /q3_sgd.py
+[I 13:15:19.793 NotebookApp] Saving file at /q3_sgd.py
+[I 13:15:21.774 NotebookApp] Saving file at /q3_sgd.py
+[I 13:15:24.144 NotebookApp] Saving file at /q3_run.py
+[I 13:15:24.351 NotebookApp] Saving file at /q3_run.py
+[I 13:15:24.521 NotebookApp] Saving file at /q3_run.py
+[I 13:15:29.231 NotebookApp] Kernel interrupted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:15:31.999 NotebookApp] Starting buffering for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 13:15:32.714 NotebookApp] Kernel restarted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:15:33.515 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 13:15:33.516 NotebookApp] Restoring connection for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 13:15:33.516 NotebookApp] Replaying 3 buffered messages
+[I 13:16:40.704 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:20:40.657 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:23:22.358 NotebookApp] Saving file at /utils/treebank.py
+[I 13:24:40.667 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:28:40.668 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:32:40.697 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:36:40.730 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:40:40.714 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:44:40.680 NotebookApp] Saving file at /assignment1.ipynb
+[I 13:48:40.705 NotebookApp] Saving file at /assignment1.ipynb
+[W 13:50:33.517 NotebookApp] WebSocket ping timeout after 119960 ms.
+[I 13:50:38.521 NotebookApp] Starting buffering for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 14:03:24.673 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 14:03:24.673 NotebookApp] Restoring connection for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 14:03:24.673 NotebookApp] Replaying 4 buffered messages
+[I 14:04:40.743 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:06:40.738 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:10:40.737 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:14:40.700 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:18:40.708 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:22:40.720 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:26:40.726 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:30:40.711 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:34:40.730 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:38:40.757 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:42:40.717 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:46:40.728 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:50:40.727 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:54:40.729 NotebookApp] Saving file at /assignment1.ipynb
+[I 14:58:40.823 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:02:40.738 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:06:40.745 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:10:40.754 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:14:40.746 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:18:40.750 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:22:40.768 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:26:40.794 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:30:40.765 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:34:40.863 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:38:40.765 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:42:40.791 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:44:40.819 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:48:40.869 NotebookApp] Saving file at /assignment1.ipynb
+[I 15:52:40.772 NotebookApp] Saving file at /assignment1.ipynb
+[I 16:21:08.570 NotebookApp] 302 GET / (128.59.82.245) 0.54ms
+[I 16:22:40.207 NotebookApp] Saving file at /assignment1.ipynb
+[I 16:24:40.807 NotebookApp] Saving file at /assignment1.ipynb
+[I 16:25:21.373 NotebookApp] Saving file at /utils/treebank.py
+[I 16:25:28.832 NotebookApp] Starting buffering for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 16:25:29.641 NotebookApp] Kernel restarted: b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 16:25:30.477 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 16:25:30.478 NotebookApp] Restoring connection for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 16:25:30.478 NotebookApp] Replaying 6 buffered messages
+[I 16:26:40.812 NotebookApp] Saving file at /assignment1.ipynb
+[W 17:14:30.479 NotebookApp] WebSocket ping timeout after 119890 ms.
+[I 17:14:35.483 NotebookApp] Starting buffering for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[I 17:14:57.851 NotebookApp] Adapting to protocol v5.1 for kernel b656181d-8180-4ef3-8ba3-f1310933bb16
+[I 17:14:57.851 NotebookApp] Restoring connection for b656181d-8180-4ef3-8ba3-f1310933bb16:cf9fc90c4939470c814e163f3bc1e5dc
+[C 17:18:09.559 NotebookApp] received signal 15, stopping
+[I 17:18:09.560 NotebookApp] Shutting down 1 kernel
+[I 17:18:09.660 NotebookApp] Kernel shutdown: b656181d-8180-4ef3-8ba3-f1310933bb16
+[W 17:31:38.020 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 17:31:38.051 NotebookApp] JupyterLab beta preview extension loaded from /home/lanho/anaconda3/lib/python3.6/site-packages/jupyterlab
+[I 17:31:38.051 NotebookApp] JupyterLab application directory is /home/lanho/anaconda3/share/jupyter/lab
+[I 17:31:38.056 NotebookApp] Serving notebooks from local directory: /root/CS224n-2018/assignment1
+[I 17:31:38.056 NotebookApp] 0 active kernels
+[I 17:31:38.056 NotebookApp] The Jupyter Notebook is running at:
+[I 17:31:38.056 NotebookApp] http://[all ip addresses on your system]:7000/?token=471159f93554bce9988270faf3a79902f83e69141488fba2
+[I 17:31:38.056 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 17:31:38.057 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7000/?token=471159f93554bce9988270faf3a79902f83e69141488fba2
+[I 17:31:59.005 NotebookApp] 302 GET /?token=471159f93554bce9988270faf3a79902f83e69141488fba2 (160.39.38.39) 0.70ms
+[I 17:32:05.399 NotebookApp] Kernel started: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 17:32:06.468 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 17:36:06.106 NotebookApp] Saving file at /assignment1.ipynb
+[W 17:39:14.649 NotebookApp] delete /a/saved_params_15000.npy
+[W 17:39:14.684 NotebookApp] delete /a/saved_params_10000.npy
+[W 17:39:14.686 NotebookApp] delete /a/saved_params_20000.npy
+[W 17:39:14.688 NotebookApp] delete /a/saved_params_25000.npy
+[W 17:39:14.689 NotebookApp] delete /a/saved_params_35000.npy
+[W 17:39:14.691 NotebookApp] delete /a/saved_params_30000.npy
+[W 17:39:14.724 NotebookApp] delete /a/saved_params_5000.npy
+[W 17:39:14.726 NotebookApp] delete /a/saved_params_40000.npy
+[W 17:39:18.919 NotebookApp] delete /a
+[I 17:46:06.101 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:48:06.130 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:52:06.127 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:52:58.026 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:54:05.177 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:56:06.137 NotebookApp] Saving file at /assignment1.ipynb
+[I 17:58:05.191 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:00:05.186 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:01:53.742 NotebookApp] Saving file at /utils/treebank.py
+[I 18:02:05.193 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:03:02.730 NotebookApp] Saving file at /utils/treebank.py
+[I 18:03:07.711 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:03:08.231 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:03:09.040 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:03:09.040 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:03:09.040 NotebookApp] Replaying 3 buffered messages
+[I 18:04:06.110 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:06:05.195 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:08:06.140 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:10:31.115 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:11:17.225 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:12:05.206 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:12:09.506 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:12:31.674 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:12:54.225 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:14:41.719 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:16:05.220 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:18:05.214 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:19:55.198 NotebookApp] Saving file at /utils/treebank.py
+[I 18:20:06.232 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:20:31.110 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[W 18:20:31.118 NotebookApp] zmq message arrived on closed channel
+[I 18:20:31.119 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:20:32.248 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:20:32.249 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:20:58.397 NotebookApp] Saving file at /q4_sentiment.py
+[I 18:21:19.740 NotebookApp] Saving file at /utils/treebank.py
+[I 18:21:23.233 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:21:24.048 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:21:25.123 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:21:25.124 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:21:25.124 NotebookApp] Replaying 6 buffered messages
+[I 18:22:05.237 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:24:05.211 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:26:06.122 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:28:05.281 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:28:35.512 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:28:42.261 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:28:42.773 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:28:43.604 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:28:43.604 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:28:43.604 NotebookApp] Replaying 3 buffered messages
+[I 18:29:28.578 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:29:39.650 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:29:46.591 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:29:47.102 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:29:47.909 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:29:47.910 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:29:47.910 NotebookApp] Replaying 3 buffered messages
+[I 18:30:05.218 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:31:05.484 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:31:09.522 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:31:10.338 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:31:11.480 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:31:11.482 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:31:11.482 NotebookApp] Replaying 5 buffered messages
+[I 18:32:05.216 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:34:04.926 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:34:06.131 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:34:11.450 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[W 18:34:11.454 NotebookApp] zmq message arrived on closed channel
+[I 18:34:11.455 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:34:12.630 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:34:12.631 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:34:12.631 NotebookApp] Replaying 5 buffered messages
+[I 18:34:50.091 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:34:54.456 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:34:55.271 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:34:56.449 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:34:56.450 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:34:56.450 NotebookApp] Replaying 3 buffered messages
+[I 18:35:33.315 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:36:05.218 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:36:35.003 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:36:50.656 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:36:51.471 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:36:52.708 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:36:52.710 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:36:52.710 NotebookApp] Replaying 3 buffered messages
+[I 18:37:49.207 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:38:05.206 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:38:09.682 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/datasetSentences.txt
+[I 18:39:59.951 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:40:01.484 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:40:02.298 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:40:03.520 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 18:40:03.521 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 18:40:03.521 NotebookApp] Replaying 3 buffered messages
+[I 18:42:07.182 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:44:06.333 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:46:06.333 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:47:37.234 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:48:06.332 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:49:10.111 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:49:54.011 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:00.983 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:01.222 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:02.428 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:06.334 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:50:33.469 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:35.021 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:35.293 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:38.971 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:39.525 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:43.925 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:44.417 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:50:44.644 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:51:11.115 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:51:43.764 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:52:06.339 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:52:20.093 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:52:53.605 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:54:06.338 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:54:20.090 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:55:09.398 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:55:44.997 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:56:06.341 NotebookApp] Saving file at /assignment1.ipynb
+[I 18:56:22.518 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:56:55.496 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:57:29.297 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:58:03.819 NotebookApp] Saving file at /utils/datasets/stanfordSentimentTreebank/dictionary.txt
+[I 18:58:06.332 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:00:06.347 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:02:07.161 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:04:06.394 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:06:06.346 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:08:06.344 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:09:31.119 NotebookApp] Saving file at /utils/treebank.py
+[I 19:10:07.180 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:12:06.358 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:13:57.183 NotebookApp] Saving file at /utils/treebank.py
+[I 19:14:06.366 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:14:58.792 NotebookApp] Saving file at /utils/treebank.py
+[I 19:15:02.412 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:15:03.341 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:15:04.459 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:15:04.460 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:15:04.460 NotebookApp] Replaying 6 buffered messages
+[I 19:16:06.522 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:16:55.175 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:18:06.363 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:20:06.360 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:22:06.353 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:24:06.372 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:26:06.356 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:28:06.360 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:28:28.726 NotebookApp] Saving file at /utils/treebank.py
+[I 19:28:34.991 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[W 19:28:35.000 NotebookApp] zmq message arrived on closed channel
+[I 19:28:35.001 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:28:36.143 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:28:36.145 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:28:36.145 NotebookApp] Replaying 3 buffered messages
+[I 19:30:06.368 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:32:06.370 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:32:59.831 NotebookApp] Saving file at /utils/treebank.py
+[I 19:33:04.392 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[W 19:33:04.400 NotebookApp] zmq message arrived on closed channel
+[I 19:33:04.401 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:33:05.575 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:33:05.576 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:33:05.576 NotebookApp] Replaying 2 buffered messages
+[I 19:33:22.533 NotebookApp] Saving file at /q4_sentiment.py
+[I 19:33:30.327 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[W 19:33:30.333 NotebookApp] zmq message arrived on closed channel
+[I 19:33:30.334 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:33:31.567 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:33:31.569 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:33:31.569 NotebookApp] Replaying 1 buffered messages
+[I 19:33:55.538 NotebookApp] Saving file at /q4_sentiment.py
+[I 19:34:03.292 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:34:04.123 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:34:05.268 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:34:05.269 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:34:05.269 NotebookApp] Replaying 6 buffered messages
+[I 19:34:06.354 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:35:58.905 NotebookApp] Saving file at /q4_sentiment.py
+[I 19:36:07.186 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:36:38.196 NotebookApp] Saving file at /q4_sentiment.py
+[I 19:36:44.672 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:36:45.486 NotebookApp] Kernel restarted: 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:36:46.541 NotebookApp] Adapting to protocol v5.1 for kernel 7dc1a485-96be-4ed5-92e4-190068b57bff
+[I 19:36:46.542 NotebookApp] Restoring connection for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc
+[I 19:36:46.542 NotebookApp] Replaying 3 buffered messages
+[I 19:38:07.176 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:46:06.364 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:47:54.272 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:48:06.374 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:50:07.192 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:54:07.184 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:54:42.838 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:55:07.117 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:55:07.296 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:55:07.454 NotebookApp] Saving file at /assignment1.ipynb
+[I 19:55:08.049 NotebookApp] Starting buffering for 7dc1a485-96be-4ed5-92e4-190068b57bff:46593beb5b6148028fd04366bc2a38bc

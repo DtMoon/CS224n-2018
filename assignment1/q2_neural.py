@@ -30,21 +30,35 @@ def forward_backward_prop(X, labels, params, dimensions):
     ofs = 0
     Dx, H, Dy = (dimensions[0], dimensions[1], dimensions[2])
 
-    W1 = np.reshape(params[ofs:ofs+ Dx * H], (Dx, H))
+    W1 = np.reshape(params[ofs: ofs + Dx * H], (Dx, H))
     ofs += Dx * H
-    b1 = np.reshape(params[ofs:ofs + H], (1, H))
+    b1 = np.reshape(params[ofs: ofs + H], (1, H))
     ofs += H
-    W2 = np.reshape(params[ofs:ofs + H * Dy], (H, Dy))
+    W2 = np.reshape(params[ofs: ofs + H * Dy], (H, Dy))
     ofs += H * Dy
-    b2 = np.reshape(params[ofs:ofs + Dy], (1, Dy))
+    b2 = np.reshape(params[ofs: ofs + Dy], (1, Dy))
 
     # Note: compute cost based on `sum` not `mean`.
     ### YOUR CODE HERE: forward propagation
-    raise NotImplementedError
+    z1 = X.dot(W1) + b1
+    h = sigmoid(z1)
+    z2 = h.dot(W2) + b2
+    y_hat = softmax(z2)
+    cost = -np.sum(np.log(y_hat[labels == 1]))
     ### END YOUR CODE
 
     ### YOUR CODE HERE: backward propagation
-    raise NotImplementedError
+    gradW2 = np.transpose(h).dot(y_hat - labels)
+    gradb2 = np.sum(y_hat - labels, axis=0)
+    gradh = (y_hat - labels).dot(np.transpose(W2))
+    gradW1 = np.transpose(X).dot(gradh * sigmoid_grad(h))
+    gradb1 = np.sum(gradh * sigmoid_grad(h), axis=0)
+    
+    assert gradW2.shape == (H, Dy)
+    assert gradb2.shape == (Dy, )
+    assert gradh.shape == (X.shape[0], H)
+    assert gradW1.shape == (Dx, H)
+    assert gradb1.shape == (H, )
     ### END YOUR CODE
 
     ### Stack gradients (do not modify)
@@ -59,14 +73,14 @@ def sanity_check():
     Set up fake data and parameters for the neural network, and test using
     gradcheck.
     """
-    print "Running sanity check..."
+    print("Running sanity check...")
 
     N = 20
     dimensions = [10, 5, 10]
     data = np.random.randn(N, dimensions[0])   # each row will be a datum
     labels = np.zeros((N, dimensions[2]))
-    for i in xrange(N):
-        labels[i, random.randint(0,dimensions[2]-1)] = 1
+    for i in range(N):
+        labels[i, random.randint(0, dimensions[2] - 1)] = 1
 
     params = np.random.randn((dimensions[0] + 1) * dimensions[1] + (
         dimensions[1] + 1) * dimensions[2], )
@@ -82,9 +96,9 @@ def your_sanity_checks():
     This function will not be called by the autograder, nor will
     your additional tests be graded.
     """
-    print "Running your sanity checks..."
+    print("Running your sanity checks...")
     ### YOUR CODE HERE
-    raise NotImplementedError
+    pass
     ### END YOUR CODE
 
 
