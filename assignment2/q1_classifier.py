@@ -46,6 +46,10 @@ class SoftmaxModel(Model):
             self.labels_placeholder
         """
         ### YOUR CODE HERE
+        # shape: The shape of the tensor to be fed (optional). 
+        # If the shape is not specified, you can feed a tensor of any shape.
+        self.x = tf.placeholder(tf.float32, shape=(self.config.batch_size, self.config.n_features))
+        self.y = tf.placeholder(tf.int32, shape=(self.config.batch_size, self.config.n_classes))
         ### END YOUR CODE
 
     def create_feed_dict(self, inputs_batch, labels_batch=None):
@@ -69,6 +73,9 @@ class SoftmaxModel(Model):
             feed_dict: The feed dictionary mapping from placeholders to values.
         """
         ### YOUR CODE HERE
+        feed_dict = {self.x: inputs_batch}
+        if labels_batch is not None:
+            feed_dict[self.y] = labels_batch
         ### END YOUR CODE
         return feed_dict
 
@@ -90,6 +97,39 @@ class SoftmaxModel(Model):
             pred: A tensor of shape (batch_size, n_classes)
         """
         ### YOUR CODE HERE
+        """
+        Difference between Variable and get_variable in TensorFlow
+        (https://stackoverflow.com/questions/37098546/difference-between-variable-and-get-variable-in-tensorflow)
+
+        1. First is that tf.Variable will always create a new variable, whether tf.get_variable gets from the graph an existing variable with those parameters, and if it does not exists, it creates a new one.
+        2. tf.Variable requires that an initial value be specified.
+        It is important to clarify that the function tf.get_variable prefixes the name with the current variable scope to perform reuse checks. For example:
+        
+        with tf.variable_scope("one"):
+            a = tf.get_variable("v", [1]) #a.name == "one/v:0"
+        with tf.variable_scope("one"):
+            b = tf.get_variable("v", [1]) #ValueError: Variable one/v already exists
+        with tf.variable_scope("one", reuse = True):
+            c = tf.get_variable("v", [1]) #c.name == "one/v:0"
+
+        with tf.variable_scope("two"):
+            d = tf.get_variable("v", [1]) #d.name == "two/v:0"
+            e = tf.Variable(1, name = "v", expected_shape = [1]) #e.name == "two/v_1:0"
+
+        assert(a is c)  #Assertion is true, they refer to the same object.
+        assert(a is d)  #AssertionError: they are different objects
+        assert(d is e)  #AssertionError: they are different objects
+        
+        The last assertion error is interesting: Two variables with the same name under the same scope are supposed to be the same variable. But if you test the names of variables d and e you will realize that Tensorflow changed the name of variable e:
+        
+        d.name   #d.name == "two/v:0"
+        e.name   #e.name == "two/v_1:0"
+        
+        If the default graph already contained an operation named "answer", the TensorFlow would append "_1", "_2", and so on to the name, in order to make it unique. (Naming operations: https://www.tensorflow.org/programmers_guide/graphs#naming_operations)
+        """
+        W = tf.get_variable('W', shape=(self.config.n_features, self.config.n_classes))
+        b = tf.get_variable('b', shape=(1, self.config.n_classes))
+        pred = softmax(tf.matmul(self.x, W) + b)
         ### END YOUR CODE
         return pred
 
@@ -104,6 +144,7 @@ class SoftmaxModel(Model):
             loss: A 0-d tensor (scalar)
         """
         ### YOUR CODE HERE
+        loss = cross_entropy_loss(self.y, pred)
         ### END YOUR CODE
         return loss
 
@@ -127,6 +168,7 @@ class SoftmaxModel(Model):
             train_op: The Op for training.
         """
         ### YOUR CODE HERE
+        train_op = tf.train.GradientDescentOptimizer(self.config.lr).minimize(loss)
         ### END YOUR CODE
         return train_op
 
@@ -161,7 +203,7 @@ class SoftmaxModel(Model):
             start_time = time.time()
             average_loss = self.run_epoch(sess, inputs, labels)
             duration = time.time() - start_time
-            print 'Epoch {:}: loss = {:.2f} ({:.3f} sec)'.format(epoch, average_loss, duration)
+            print('Epoch {:}: loss = {:.2f} ({:.3f} sec)'.format(epoch, average_loss, duration))
             losses.append(average_loss)
         return losses
 
@@ -191,22 +233,22 @@ def test_softmax_model():
         # Build the model and add the variable initializer op
         model = SoftmaxModel(config)
         init_op = tf.global_variables_initializer()
-    # Finalizing the graph causes tensorflow to raise an exception if you try to modify the graph
-    # further. This is good practice because it makes explicit the distinction between building and
-    # running the graph.
-    graph.finalize()
+        # Finalizing the graph causes tensorflow to raise an exception if you try to modify the graph
+        # further. This is good practice because it makes explicit the distinction between building and
+        # running the graph.
+        graph.finalize()
 
-    # Create a session for running ops in the graph
-    with tf.Session(graph=graph) as sess:
-        # Run the op to initialize the variables.
-        sess.run(init_op)
-        # Fit the model
-        losses = model.fit(sess, inputs, labels)
+        # Create a session for running ops in the graph
+        with tf.Session(graph=graph) as sess:
+            # Run the op to initialize the variables.
+            sess.run(init_op)
+            # Fit the model
+            losses = model.fit(sess, inputs, labels)
 
     # If ops are implemented correctly, the average loss should fall close to zero
     # rapidly.
     assert losses[-1] < .5
-    print "Basic (non-exhaustive) classifier tests pass"
+    print("Basic (non-exhaustive) classifier tests pass")
 
 if __name__ == "__main__":
     test_softmax_model()

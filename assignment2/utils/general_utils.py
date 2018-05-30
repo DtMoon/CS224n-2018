@@ -36,7 +36,7 @@ def get_minibatches(data, minibatch_size, shuffle=True):
     if shuffle:
         np.random.shuffle(indices)
     for minibatch_start in np.arange(0, data_size, minibatch_size):
-        minibatch_indices = indices[minibatch_start:minibatch_start + minibatch_size]
+        minibatch_indices = indices[minibatch_start: minibatch_start + minibatch_size]
         yield [_minibatch(d, minibatch_indices) for d in data] if list_data \
             else _minibatch(data, minibatch_indices)
 
@@ -52,4 +52,4 @@ def test_all_close(name, actual, expected):
     if np.amax(np.fabs(actual - expected)) > 1e-6:
         raise ValueError("{:} failed, expected {:} but value is {:}".format(name, expected, actual))
     else:
-        print name, "passed!"
+        print(name, "passed!")
