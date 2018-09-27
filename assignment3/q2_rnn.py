@@ -103,7 +103,13 @@ def pad_sequences(data, max_length):
 
     for sentence, labels in data:
         ### YOUR CODE HERE (~4-6 lines)
-        pass
+        if len(sentence) < max_length:
+            new_sentence = sentence.copy() + [zero_vector] * (max_length - len(sentence))
+            new_labels = labels.copy() + [zero_label] * (max_length - len(sentence))
+            mask = [True] * len(sentence) + [False] * (max_length - len(sentence))
+            ret.append((new_sentence, new_labels, mask))
+        else:
+            ret.append((sentence[:max_length].copy(), labels[:max_length].copy(), [True] * max_length))
         ### END YOUR CODE ###
     return ret
 
@@ -141,6 +147,10 @@ class RNNModel(NERModel):
         (Don't change the variable names)
         """
         ### YOUR CODE HERE (~4-6 lines)
+        self.input_placeholder = tf.placeholder(tf.int32, shape=(None, self.config.max_length, self.config.n_features))
+        self.labels_placeholder = tf.placeholder(tf.int32, shape=(None, self.config.max_length))
+        self.mask_placeholder = tf.placeholder(tf.bool, shape=(None, self.config.max_length))
+        self.dropout_placeholder = tf.placeholder(tf.float32, shape=())
         ### END YOUR CODE
 
     def create_feed_dict(self, inputs_batch, mask_batch, labels_batch=None, dropout=1):
@@ -166,6 +176,12 @@ class RNNModel(NERModel):
             feed_dict: The feed dictionary mapping from placeholders to values.
         """
         ### YOUR CODE (~6-10 lines)
+        feed_dict = {}
+        feed_dict[self.input_placeholder] = inputs_batch
+        if labels_batch is not None:
+            feed_dict[self.labels_placeholder] = labels_batch
+        feed_dict[self.mask_placeholder] = mask_batch
+        feed_dict[self.dropout_placeholder] = dropout
         ### END YOUR CODE
         return feed_dict
 
@@ -190,6 +206,10 @@ class RNNModel(NERModel):
             embeddings: tf.Tensor of shape (None, max_length, n_features*embed_size)
         """
         ### YOUR CODE HERE (~4-6 lines)
+        embed_matrix = tf.get_variable('embed_matrix', shape=self.pretrained_embeddings.shape,
+                                    initializer=tf.constant_initializer(self.pretrained_embeddings))
+        embed = tf.nn.embedding_lookup(embed_matrix, self.input_placeholder)
+        embeddings = tf.reshape(embed, (-1, self.config.max_length, self.config.n_features * self.config.embed_size))
         ### END YOUR CODE
         return embeddings
 
@@ -245,22 +265,35 @@ class RNNModel(NERModel):
             cell = RNNCell(Config.n_features * Config.embed_size, Config.hidden_size)
         elif self.config.cell == "gru":
             cell = GRUCell(Config.n_features * Config.embed_size, Config.hidden_size)
+        elif self.config.cell == "lstm":
+            cell = tf.nn.rnn_cell.BasicLSTMCell(num_units=Config.hidden_size)
         else:
             raise ValueError("Unsuppported cell type: " + self.config.cell)
 
         # Define U and b2 as variables.
         # Initialize state as vector of zeros.
         ### YOUR CODE HERE (~4-6 lines)
+        U = tf.get_variable('U', shape=(self.config.hidden_size, self.config.n_classes), initializer=tf.contrib.layers.xavier_initializer())
+        b2 = tf.get_variable('b2', shape=(self.config.n_classes,), initializer=tf.constant_initializer(0))
+#         h = tf.zeros((tf.shape(x)[0], self.config.hidden_size)) # lstm cell will raise an error if use this initialization
+        h = cell.zero_state(tf.shape(x)[0], tf.float32)
         ### END YOUR CODE
 
         with tf.variable_scope("RNN"):
             for time_step in range(self.max_length):
                 ### YOUR CODE HERE (~6-10 lines)
-                pass
+                o_t, h = cell(x[:, time_step, :], h)
+                o_drop_t = tf.nn.dropout(o_t, dropout_rate)
+                y_t = tf.matmul(o_drop_t, U) + b2
+                preds.append(y_t)
+                if time_step == 0:
+                    tf.get_variable_scope().reuse_variables()
                 ### END YOUR CODE
 
         # Make sure to reshape @preds here.
         ### YOUR CODE HERE (~2-4 lines)
+        preds = tf.stack(preds)
+        preds = tf.transpose(preds, [1, 0, 2])
         ### END YOUR CODE
 
         assert preds.get_shape().as_list() == [None, self.max_length, self.config.n_classes], "predictions are not of the right shape. Expected {}, got {}".format([None, self.max_length, self.config.n_classes], preds.get_shape().as_list())
@@ -282,6 +315,8 @@ class RNNModel(NERModel):
             loss: A 0-d tensor (scalar)
         """
         ### YOUR CODE HERE (~2-4 lines)
+        loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(labels=tf.boolean_mask(self.labels_placeholder, self.mask_placeholder), 
+                                                                             logits=tf.boolean_mask(preds, self.mask_placeholder)))
         ### END YOUR CODE
         return loss
 
@@ -305,6 +340,7 @@ class RNNModel(NERModel):
             train_op: The Op for training.
         """
         ### YOUR CODE HERE (~1-2 lines)
+        train_op = tf.train.AdamOptimizer().minimize(loss)
         ### END YOUR CODE
         return train_op
 
@@ -503,7 +539,7 @@ input> Germany 's representative to the European Union 's veterinary committee .
             while True:
                 # Create simple REPL
                 try:
-                    sentence = raw_input("input> ")
+                    sentence = input("input> ")
                     tokens = sentence.strip().split(" ")
                     for sentence, _, predictions in model.output(session, [(tokens, ["O"] * len(tokens))]):
                         predictions = [LBLS[l] for l in predictions]
@@ -532,7 +568,7 @@ if __name__ == "__main__":
     command_parser.add_argument('-dd', '--data-dev', type=argparse.FileType('r'), default="data/dev.conll", help="Dev data")
     command_parser.add_argument('-v', '--vocab', type=argparse.FileType('r'), default="data/vocab.txt", help="Path to vocabulary file")
     command_parser.add_argument('-vv', '--vectors', type=argparse.FileType('r'), default="data/wordVectors.txt", help="Path to word vectors file")
-    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru"], default="rnn", help="Type of RNN cell to use.")
+    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru", "lstm"], default="rnn", help="Type of RNN cell to use.")
     command_parser.set_defaults(func=do_train)
 
     command_parser = subparsers.add_parser('evaluate', help='')
@@ -540,7 +576,7 @@ if __name__ == "__main__":
     command_parser.add_argument('-m', '--model-path', help="Training data")
     command_parser.add_argument('-v', '--vocab', type=argparse.FileType('r'), default="data/vocab.txt", help="Path to vocabulary file")
     command_parser.add_argument('-vv', '--vectors', type=argparse.FileType('r'), default="data/wordVectors.txt", help="Path to word vectors file")
-    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru"], default="rnn", help="Type of RNN cell to use.")
+    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru", "lstm"], default="rnn", help="Type of RNN cell to use.")
     command_parser.add_argument('-o', '--output', type=argparse.FileType('w'), default=sys.stdout, help="Training data")
     command_parser.set_defaults(func=do_evaluate)
 
@@ -548,7 +584,7 @@ if __name__ == "__main__":
     command_parser.add_argument('-m', '--model-path', help="Training data")
     command_parser.add_argument('-v', '--vocab', type=argparse.FileType('r'), default="data/vocab.txt", help="Path to vocabulary file")
     command_parser.add_argument('-vv', '--vectors', type=argparse.FileType('r'), default="data/wordVectors.txt", help="Path to word vectors file")
-    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru"], default="rnn", help="Type of RNN cell to use.")
+    command_parser.add_argument('-c', '--cell', choices=["rnn", "gru", "lstm"], default="rnn", help="Type of RNN cell to use.")
     command_parser.set_defaults(func=do_shell)
 
     ARGS = parser.parse_args()

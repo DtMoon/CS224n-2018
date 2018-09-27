@@ -102,7 +102,7 @@ class ModelHelper(object):
         if not os.path.exists(path):
             os.makedirs(path)
         # Save the tok2id map.
-        with open(os.path.join(path, "features.pkl"), "w") as f:
+        with open(os.path.join(path, "features.pkl"), "wb") as f:
             pickle.dump([self.tok2id, self.max_length], f)
 
     @classmethod
@@ -110,7 +110,7 @@ class ModelHelper(object):
         # Make sure the directory exists.
         assert os.path.exists(path) and os.path.exists(os.path.join(path, "features.pkl"))
         # Save the tok2id map.
-        with open(os.path.join(path, "features.pkl")) as f:
+        with open(os.path.join(path, "features.pkl"), 'rb') as f:
             tok2id, max_length = pickle.load(f)
         return cls(tok2id, max_length)
 
@@ -151,7 +151,12 @@ def build_dict(words, max_words=None, offset=0):
 
 
 def get_chunks(seq, default=LBLS.index(NONE)):
-    """Breaks input of 4 4 4 0 0 4 0 ->   (0, 4, 5), (0, 6, 7)"""
+    """
+        This is used for caluculating entity level P/R/F1.
+        Find all contiguous sequences of non-null tags with the same type.
+        Breaks input of 4 4 4 0 0 4 0 ->   (0, 3, 5), (1, 6, 7)
+        (0, 3, 5): 0 is the type of the chunk, 3 is the start index of the chunk, 5 - 1 is the end index of the chunk
+    """
     chunks = []
     chunk_type, chunk_start = None, None
     for i, tok in enumerate(seq):

@@ -161,7 +161,7 @@ class WindowModel(NERModel):
         ### YOUR CODE HERE (~5-10 lines)
         feed_dict = {}
         feed_dict[self.input_placeholder] = inputs_batch
-        if labels_batch != None:
+        if labels_batch is not None:
             feed_dict[self.labels_placeholder] = labels_batch
         feed_dict[self.dropout_placeholder] = dropout
         ### END YOUR CODE
@@ -187,7 +187,7 @@ class WindowModel(NERModel):
         embed_matrix = tf.get_variable('embed_matrix', shape=self.pretrained_embeddings.shape,
                                     initializer=tf.constant_initializer(self.pretrained_embeddings))
         embed = tf.nn.embedding_lookup(embed_matrix, self.input_placeholder)
-        embeddings = tf.reshape(embed, (-1, self.config.n_window_features * self.config.window_size))
+        embeddings = tf.reshape(embed, (-1, self.config.n_window_features * self.config.embed_size))
         ### END YOUR CODE
         return embeddings
 
@@ -219,7 +219,7 @@ class WindowModel(NERModel):
         dropout_rate = self.dropout_placeholder
         ### YOUR CODE HERE (~10-20 lines)
         xavier_initializer = tf.contrib.layers.xavier_initializer()
-        W = tf.get_variable('W', shape=(self.config.n_window_features * self.config.window_size, self.config.hidden_size), initializer=xavier_initializer)
+        W = tf.get_variable('W', shape=(self.config.n_window_features * self.config.embed_size, self.config.hidden_size), initializer=xavier_initializer)
         b1 = tf.get_variable('b1', shape=(1, self.config.hidden_size), initializer=tf.zeros_initializer())
         h = tf.nn.relu(tf.matmul(x, W) + b1)
         h_drop = tf.nn.dropout(h, self.dropout_placeholder)
@@ -363,6 +363,8 @@ def do_train(args):
     # Set up some parameters.
     config = Config()
     helper, train, dev, train_raw, dev_raw = load_and_preprocess_data(args)
+    logger.info("The first training example:\n%s", str(train_raw[0]))
+    logger.info("The first preprocessed training example:\n%s", str(train[0]))
     embeddings = load_embeddings(args, helper)
     config.embed_size = embeddings.shape[1]
     helper.save(config.output_path)
@@ -453,7 +455,7 @@ input> Germany 's representative to the European Union 's veterinary committee .
             while True:
                 # Create simple REPL
                 try:
-                    sentence = raw_input("input> ")
+                    sentence = input("input> ")
                     tokens = sentence.strip().split(" ")
                     for sentence, _, predictions in model.output(session, [(tokens, ["O"] * len(tokens))]):
                         predictions = [LBLS[l] for l in predictions]
