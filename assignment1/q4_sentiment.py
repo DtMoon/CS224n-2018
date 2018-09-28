@@ -166,6 +166,11 @@ def main(args):
     nTrain = len(trainset)
     trainFeatures = np.zeros((nTrain, dimVectors))
     trainLabels = np.zeros((nTrain,), dtype=np.int32)
+    print(nTrain)
+    print(type(trainset))
+    print(type(trainset[0]))
+    print(trainset[0])
+    print(wordVectors.shape)
     for i in range(nTrain):
         words, trainLabels[i] = trainset[i]
         trainFeatures[i, :] = getSentenceFeatures(tokens, wordVectors, words)
@@ -173,6 +178,7 @@ def main(args):
     # Prepare dev set features
     devset = dataset.getDevSentences()
     nDev = len(devset)
+    print(nDev)
     devFeatures = np.zeros((nDev, dimVectors))
     devLabels = np.zeros((nDev,), dtype=np.int32)
     for i in range(nDev):
@@ -188,38 +194,38 @@ def main(args):
         words, testLabels[i] = testset[i]
         testFeatures[i, :] = getSentenceFeatures(tokens, wordVectors, words)
 
-    # We will save our results from each run
-    results = []
-    regValues = getRegularizationValues()
-    for reg in regValues:
-        print("Training for reg={:f}".format(reg))
-        # Note: add a very small number to regularization to please the library
-        clf = LogisticRegression(C=1.0/(reg + 1e-12))
-        clf.fit(trainFeatures, trainLabels)
+#     # We will save our results from each run
+#     results = []
+#     regValues = getRegularizationValues()
+#     for reg in regValues:
+#         print("Training for reg={:f}".format(reg))
+#         # Note: add a very small number to regularization to please the library
+#         clf = LogisticRegression(C=1.0/(reg + 1e-12))
+#         clf.fit(trainFeatures, trainLabels)
 
-        # Test on train set
-        pred = clf.predict(trainFeatures)
-        trainAccuracy = accuracy(trainLabels, pred)
-        print("Train accuracy (%%): {:f}".format(trainAccuracy))
+#         # Test on train set
+#         pred = clf.predict(trainFeatures)
+#         trainAccuracy = accuracy(trainLabels, pred)
+#         print("Train accuracy (%%): {:f}".format(trainAccuracy))
 
-        # Test on dev set
-        pred = clf.predict(devFeatures)
-        devAccuracy = accuracy(devLabels, pred)
-        print("Dev accuracy (%%): {:f}".format(devAccuracy))
+#         # Test on dev set
+#         pred = clf.predict(devFeatures)
+#         devAccuracy = accuracy(devLabels, pred)
+#         print("Dev accuracy (%%): {:f}".format(devAccuracy))
 
-        # Test on test set
-        # Note: always running on test is poor style. Typically, you should
-        # do this only after validation.
-        pred = clf.predict(testFeatures)
-        testAccuracy = accuracy(testLabels, pred)
-        print("Test accuracy (%%): {:f}".format(testAccuracy))
+#         # Test on test set
+#         # Note: always running on test is poor style. Typically, you should
+#         # do this only after validation.
+#         pred = clf.predict(testFeatures)
+#         testAccuracy = accuracy(testLabels, pred)
+#         print("Test accuracy (%%): {:f}".format(testAccuracy))
 
-        results.append({
-            "reg": reg,
-            "clf": clf,
-            "train": trainAccuracy,
-            "dev": devAccuracy,
-            "test": testAccuracy})
+#         results.append({
+#             "reg": reg,
+#             "clf": clf,
+#             "train": trainAccuracy,
+#             "dev": devAccuracy,
+#             "test": testAccuracy})
 
     # Print the accuracies
     print("")

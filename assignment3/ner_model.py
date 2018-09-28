@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 A model for named entity recognition.
@@ -6,6 +6,7 @@ A model for named entity recognition.
 import pdb
 import logging
 
+import math
 import tensorflow as tf
 from util import ConfusionMatrix, Progbar, minibatches
 from data_util import get_chunks
@@ -82,7 +83,7 @@ class NERModel(Model):
             inputs = self.preprocess_sequence_data(self.helper.vectorize(inputs_raw))
 
         preds = []
-        prog = Progbar(target=1 + int(len(inputs) / self.config.batch_size))
+        prog = Progbar(target=math.ceil(len(inputs) / self.config.batch_size))
         for i, batch in enumerate(minibatches(inputs, self.config.batch_size, shuffle=False)):
             # Ignore predict
             batch = batch[:1] + batch[2:]
@@ -101,7 +102,7 @@ class NERModel(Model):
             logger.info("Epoch %d out of %d", epoch + 1, self.config.n_epochs)
             # You may use the progress bar to monitor the training progress
             # Addition of progress bar will not be graded, but may help when debugging
-            prog = Progbar(target=1 + int(len(train_examples) / self.config.batch_size))
+            prog = Progbar(target=math.ceil(len(train_examples) / self.config.batch_size))
 			
 			# The general idea is to loop over minibatches from train_examples, and run train_on_batch inside the loop
 			# Hint: train_examples could be a list containing the feature data and label data

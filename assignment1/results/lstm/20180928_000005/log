@@ -1,0 +1,97 @@
+2018-09-28 00:00:08,199:INFO: Building model...
+2018-09-28 00:00:17,634:INFO: took 9.43 seconds
+2018-09-28 00:00:18,098:INFO: Epoch 1 out of 10
+2018-09-28 00:01:09,155:INFO: Evaluating on development data
+2018-09-28 00:02:26,971:DEBUG: confusion matrix:
+[[ 24  79   2  32   4]
+ [ 22 151   3  89  25]
+ [ 11  91   4  94  25]
+ [  4  52   1 121 103]
+ [  0   7   1  43 113]]
+2018-09-28 00:02:26,971:INFO: f1 score: 0.38
+2018-09-28 00:02:26,972:INFO: New best score! Saving model in results/lstm/20180928_000005/model.weights
+2018-09-28 00:02:27,742:INFO: Epoch 2 out of 10
+2018-09-28 00:03:06,850:INFO: Evaluating on development data
+2018-09-28 00:04:26,003:DEBUG: confusion matrix:
+[[  0 131   3   7   0]
+ [  0 246   6  37   1]
+ [  0 154  14  53   4]
+ [  0 102  12 132  35]
+ [  0  23   6  81  54]]
+2018-09-28 00:04:26,004:INFO: f1 score: 0.41
+2018-09-28 00:04:26,004:INFO: New best score! Saving model in results/lstm/20180928_000005/model.weights
+2018-09-28 00:04:26,691:INFO: Epoch 3 out of 10
+2018-09-28 00:05:05,923:INFO: Evaluating on development data
+2018-09-28 00:06:25,812:DEBUG: confusion matrix:
+[[ 55  71   7   8   0]
+ [ 61 162  18  47   2]
+ [ 21 101  33  67   3]
+ [  8  67  23 157  26]
+ [  0  14   7  89  54]]
+2018-09-28 00:06:25,812:INFO: f1 score: 0.42
+2018-09-28 00:06:25,813:INFO: New best score! Saving model in results/lstm/20180928_000005/model.weights
+2018-09-28 00:06:26,638:INFO: Epoch 4 out of 10
+2018-09-28 00:07:05,853:INFO: Evaluating on development data
+2018-09-28 00:08:26,673:DEBUG: confusion matrix:
+[[ 31  78  11  20   1]
+ [ 28 165  18  76   3]
+ [  9  83  29 100   4]
+ [  3  38  18 179  43]
+ [  0   5   6  88  65]]
+2018-09-28 00:08:26,674:INFO: f1 score: 0.43
+2018-09-28 00:08:26,674:INFO: New best score! Saving model in results/lstm/20180928_000005/model.weights
+2018-09-28 00:08:27,361:INFO: Epoch 5 out of 10
+2018-09-28 00:09:06,791:INFO: Evaluating on development data
+2018-09-28 00:10:29,299:DEBUG: confusion matrix:
+[[ 30  82  20   9   0]
+ [ 23 172  49  40   6]
+ [  6  94  54  64   7]
+ [  3  49  48 135  46]
+ [  0   7  18  69  70]]
+2018-09-28 00:10:29,299:INFO: f1 score: 0.42
+2018-09-28 00:10:29,300:INFO: Epoch 6 out of 10
+2018-09-28 00:11:08,802:INFO: Evaluating on development data
+2018-09-28 00:12:29,031:DEBUG: confusion matrix:
+[[ 48  56  24   9   4]
+ [ 55 134  46  42  13]
+ [ 17  70  57  57  24]
+ [  8  32  57 102  82]
+ [  1   3  14  58  88]]
+2018-09-28 00:12:29,031:INFO: f1 score: 0.39
+2018-09-28 00:12:29,031:INFO: Epoch 7 out of 10
+2018-09-28 00:13:08,329:INFO: Evaluating on development data
+2018-09-28 00:14:28,032:DEBUG: confusion matrix:
+[[ 56  50  21  11   3]
+ [ 55 128  51  47   9]
+ [ 18  61  65  64  17]
+ [  8  33  56 119  65]
+ [  1   4  18  63  78]]
+2018-09-28 00:14:28,033:INFO: f1 score: 0.41
+2018-09-28 00:14:28,033:INFO: Epoch 8 out of 10
+2018-09-28 00:15:08,265:INFO: Evaluating on development data
+2018-09-28 00:16:28,368:DEBUG: confusion matrix:
+[[ 35  67  21  15   3]
+ [ 38 133  54  54  11]
+ [ 10  59  68  68  20]
+ [  7  25  53 113  83]
+ [  0   5  11  65  83]]
+2018-09-28 00:16:28,368:INFO: f1 score: 0.39
+2018-09-28 00:16:28,368:INFO: Epoch 9 out of 10
+2018-09-28 00:17:07,646:INFO: Evaluating on development data
+2018-09-28 00:18:26,947:DEBUG: confusion matrix:
+[[ 49  59  20  12   1]
+ [ 46 150  48  42   4]
+ [ 13  72  67  64   9]
+ [  9  36  62 131  43]
+ [  1   7  19  75  62]]
+2018-09-28 00:18:26,947:INFO: f1 score: 0.42
+2018-09-28 00:18:26,947:INFO: Epoch 10 out of 10
+2018-09-28 00:19:06,191:INFO: Evaluating on development data
+2018-09-28 00:20:28,269:DEBUG: confusion matrix:
+[[ 53  47  24  15   2]
+ [ 48 130  51  55   6]
+ [ 17  57  65  69  17]
+ [ 10  27  56 138  50]
+ [  0   6  16  72  70]]
+2018-09-28 00:20:28,269:INFO: f1 score: 0.41
+2018-09-28 00:21:49,208:DEBUG: findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/home/lanhongyuee/anaconda3/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
